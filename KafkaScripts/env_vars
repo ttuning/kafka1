@@ -1,2 +1,5 @@
 export BPATH=/opt/kafka/bin
 export SPATH=/home/jumpuser/esp-high-availability-using-kafka-and-viya-4/KafkaScripts
+export KBROKER0=localhost:9092
+export KBROKER1=localhost:9093
+export KBROKER2=localhost:9094

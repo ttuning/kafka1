@@ -4,7 +4,7 @@
 #SPDX-License-Identifier: Apache-2.0
 
 #source /home/jumpuser/esp-high-availability-using-kafka-and-viya-4/KafkaScripts/env_vars
-source ~/env_vars
+source ./env_vars
 
 echo  "show the SPATH"
 echo $SPATH

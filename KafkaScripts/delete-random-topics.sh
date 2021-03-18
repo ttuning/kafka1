@@ -1,13 +1,10 @@
-#!/usr/bin/env bash 
+#!/usr/bin/bash 
 
-#Copyright © 2019, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.
+#Copyright © 2021, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved....
 #SPDX-License-Identifier: Apache-2.0
-#  
-#  Delete topics that aren't listed below.
-#
-cd /opt/kafka/
-BPATH=/opt/kafka/bin
-SPATH=/opt/kafka/myscripts
+
+source ./env_vars
+
 echo $1
 
 if [[ "$#" != 1  ]] ;  then 
@@ -16,7 +13,7 @@ if [[ "$#" != 1  ]] ;  then
    exit 1 
 fi
 
-TOPICS=$(/opt/kafka/bin/kafka-topics.sh --list --zookeeper localhost:2181)
+TOPICS=$($BPATH/kafka-topics.sh --list --zookeeper localhost:2181)
 
 for T in $TOPICS
 do 

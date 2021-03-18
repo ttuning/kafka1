@@ -24,7 +24,5 @@ echo "Starting Broker2"
 
 nohup ./run-server2.sh > /tmp/${LOGTIME}server2.log 2>&1 &
 
-sleep 9
 
-ps -ef | grep run-
 

@@ -8,4 +8,4 @@ cat  /home/jumpuser/esp-high-availability-using-kafka-and-viya-4/KafkaScripts/en
 echo  "show the SPATH"
 echo $SPATH
 
-$BPATH/kafka-topics.sh --list --zookeeper localhost:2181
+#$BPATH/kafka-topics.sh --list --zookeeper localhost:2181

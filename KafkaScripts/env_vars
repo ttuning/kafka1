@@ -1,0 +1,2 @@
+export BPATH=/opt/kafka/bin
+export SPATH=/home/jumpuser/esp-high-availability-using-kafka-and-viya-4/KafkaScripts

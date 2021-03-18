@@ -1,13 +1,8 @@
-#!/usr/bin/env bash 
+#!/usr/bin/bash 
 
-#Copyright © 2019, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.
+#Copyright © 2021, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved....
 #SPDX-License-Identifier: Apache-2.0
 
-cd /opt/kafka/
-BPATH=/opt/kafka/bin
-SPATH=/opt/kafka/myscripts
+source ./env_vars
 
-#gnome-terminal -e "$BPATH/kafka-server-start.sh $SPATH/server0.properties" --window-with-profile=kafkabroker
-gnome-terminal  --window-with-profile=kafkabroker -- $BPATH/kafka-server-start.sh $SPATH/server0.properties
-
- 
+$BPATH/kafka-server-start.sh $SPATH/server0.properties

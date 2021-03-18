@@ -14,7 +14,7 @@ fi
 
 
 $BPATH/kafka-console-consumer.sh \
---bootstrap-server $KBROKER0:9092,$KBROKER1:9093,$KBROKER2:9094 \
+--bootstrap-server $KBROKER0,$KBROKER1,$KBROKER2 \
 --topic $1 \
 --from-beginning
 

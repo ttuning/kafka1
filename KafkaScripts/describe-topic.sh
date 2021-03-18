@@ -1,11 +1,10 @@
-#!/usr/bin/env bash 
+#!/usr/bin/bash 
 
-#Copyright © 2019, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.
+#Copyright © 2021, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved....
 #SPDX-License-Identifier: Apache-2.0
 
-cd /opt/kafka/
-BPATH=/opt/kafka/bin
-SPATH=/opt/kafka/myscripts
+source ./env_vars
+
 echo $1
 
 if [[ "$#" != 1                  ]] ;  then 
@@ -16,5 +15,3 @@ fi
 $BPATH/kafka-topics.sh --describe \
 --zookeeper localhost:2181 \
 --topic $1
-
- 

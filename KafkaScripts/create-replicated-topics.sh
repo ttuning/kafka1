@@ -5,30 +5,35 @@
 
 source ./env_vars
 
+# meta topic for coordination between ESP servers and Kafka
 $BPATH/kafka-topics.sh --create \
 --zookeeper localhost:2181 \
 --replication-factor 3  \
 --partitions 1 \
---topic iotdemo.na.sas.com_61001.M   
+--topic HAtopic1_31415.M   
 
+# HA topic that feeds ESP source window
 $BPATH/kafka-topics.sh --create \
 --zookeeper localhost:2181 \
 --replication-factor 3  \
 --partitions 1 \
---topic iotdemo.na.sas.com_61001.kafka1.cq1.kafka_incoming.I
+--topic HAtopic1_31415.ESP_Project_HA_Kafka.ESP_CQ.ESP_incoming_source_window.I
 
+# HA topic that ESP publishes to
 $BPATH/kafka-topics.sh --create \
 --zookeeper localhost:2181 \
 --replication-factor 3  \
 --partitions 1 \
---topic iotdemo.na.sas.com_61001.kafka1.cq1.kafka_outgoing.O
+--topic HAtopic1_31415.ESP_Project_HA_Kafka.ESP_CQ.ESP_outgoing_window.O
 
+# Used for Adapter fail over
 $BPATH/kafka-topics.sh --create \
 --zookeeper localhost:2181 \
 --replication-factor 3  \
 --partitions 1 \
 --topic ESPAdapterMetapub
 
+# Used for Adapter fail over
 $BPATH/kafka-topics.sh --create \
 --zookeeper localhost:2181 \
 --replication-factor 3  \

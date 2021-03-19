@@ -8,7 +8,7 @@ source ./env_vars
 
 $BPATH/kafka-console-consumer.sh \
 --bootstrap-server $KBROKER0,$KBROKER1,$KBROKER2 \
---topic ESP_Project_HA_Kafka.ESP_CQ.ESP_incoming_source_window.I \
+--topic HAtopic1_31415.ESP_Project_HA_Kafka.ESP_CQ.ESP_incoming_source_window.I \
 --from-beginning
 
  

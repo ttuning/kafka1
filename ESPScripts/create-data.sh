@@ -37,8 +37,8 @@ counter=1
 until [ $counter -gt $parg2 ]
 do 
 
-    usedmemory=$(vmstat -s --unit M | grep -i "used memory" | cut -f 10 -d " ")
-    freememory=$(vmstat -s --unit M | grep -i "free memory" | cut  -d " " -f 1 )	
+    usedmemory=$(vmstat -s --unit M | grep -i "used memory" | awk '{print $1;}' )
+    freememory=$(vmstat -s --unit M | grep -i "free memory" | awk '{print $1;}' )	
     
     echo $prefix$usedmemory$del$freememory >> $outfile
     sleep $parg1

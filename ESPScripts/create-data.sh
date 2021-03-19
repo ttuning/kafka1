@@ -8,7 +8,7 @@ echo $1
 
 parg1=$1
 parg2=$2
-outfile="/tmp/dstat_in.csv"
+outfile="/mnt/viya-share/totunitest3/esp/HA_Input_data.csv"
 prefix="I,n,,"
 del=","
 echo "Write data to "$outfile

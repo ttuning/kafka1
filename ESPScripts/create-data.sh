@@ -39,8 +39,9 @@ do
 
     usedmemory=$(vmstat -s --unit M | grep -i "used memory" | awk '{print $1;}' )
     freememory=$(vmstat -s --unit M | grep -i "free memory" | awk '{print $1;}' )	
+    linuxepoch=$(date +%s)
     
-    echo $prefix$usedmemory$del$freememory >> $outfile
+    echo $prefix$usedmemory$del$freememory$del$linuxepoch >> $outfile
     sleep $parg1
     echo -n "."
 	

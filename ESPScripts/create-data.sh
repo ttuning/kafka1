@@ -30,7 +30,7 @@ if [ -z "$2" ] ; then  # set default iterations
 fi
 
 rm $outfile
-echo "ESP kafka input data" > $outfile
+echo "ESP kafka input data epoch" > $outfile
 
 
 counter=1 
